@@ -1,8 +1,7 @@
 # Alkalmazás Fejlesztés Beadnadó
 ## Dokumentáció
 
-##### Pál Szabolcs
-##### E5M3EI
+##### Pál Szabolcs, E5M3EI
 ##### palszabcs@gmail.com
 
 #Brainstrom börze
@@ -31,9 +30,25 @@ Az ötleteket, webes kliensel hozzuk létre, az adat védelem érdekében legyen
 - Megbízhatógás: jelszóvel védett funkciók, hibakezelés legyen áttekinthető.
 - Karbantarthatóság: könnyen és gyorsan lehessen új szekciókkal bővíteni, régieket módosítani.
 
-1.2 Szakterületi fogalomjegyzék
+###1.2 Fogalomjegyzék
 
-Projekt típusok:
+####Projekt típusok:
     - megvalósítás: szakmai segítség nyújtása, befektetés
     - támogatás: költségek kisegítése, adományozás
     - tervezés: befejezetlen projekt kiegészítése
+
+###1.3. Használatieset-modell, funkcionális követelmények
+
+####Vendég: Csak a publikus oldalakat éri el
+
+- Főoldal
+- Bejelentkezés
+- Regisztráció
+
+####Bejelentkezett felhasználó: A publikus oldalak elérésén felül egyéb funkciókhoz is hozzáfér.
+
+- Új projekt felvétele
+- Projekt megtekintése
+- Projekt szerkesztése
+- Projekt törlése
+- Komment írása
