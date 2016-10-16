@@ -53,4 +53,4 @@ Az ötleteket, webes kliensel hozzuk létre, az adat védelem érdekében legyen
 - Projekt törlése
 - Komment írása
 
-![]](docs/images/umlproject.jpg)
+![](docs/images/umlproject.jpg)
