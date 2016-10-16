@@ -16,13 +16,13 @@ Az ötleteket, webes kliensel hozzuk létre, az adat védelem érdekében legyen
 
 Funkcionális követelmények:
 
--Regisztráció
--Bejelentkezés
--Bejelentkezett felhasználó funkció:
-    -új ötlet feltöltése
-    -meglévő ötletének szerkesztése
-    -meglévő ötletének törlése
-    -üzenet, komment írása
+- Regisztráció
+- Bejelentkezés
+- Bejelentkezett felhasználó funkció:
+    - új ötlet feltöltése
+    - meglévő ötletének szerkesztése
+    - meglévő ötletének törlése
+    - üzenet, komment írása
 
 Nem funkcionális követelmények:
 
