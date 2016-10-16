@@ -1,20 +1,20 @@
 # Alkalmazás Fejlesztés Beadnadó
 ## Dokumentáció
 
-Név: Pál Szabolcs
-NEPTUN: E5M3EI
-e-mail: palszabcs@gmail.com
+##### Pál Szabolcs
+##### E5M3EI
+##### palszabcs@gmail.com
 
-##Brainstrom börze
+#Brainstrom börze
 
-###1. Követelményanalízis
+##1. Követelményanalízis
 
-####1.1 Célkitűzés, projektindító dokumentum
+###1.1 Célkitűzés, projektindító dokumentum
 
 A program legfőbb célja, hogy bárki segítséget találhasson egy projektjének a elkészítéséhez, akár megvalósításhoz kell, akár támogatót keres vagy csak egyszerűen nincs teljesen még kész a terv.
 Az ötleteket, webes kliensel hozzuk létre, az adat védelem érdekében legyen lehetőség regisztrációra. A bejelentkezett felhasználó megtekintheti az ötletek listáját, tehet fel saját ötletet, törölheti azokat és megjegyzést írhat hozzájuk.
 
-#####Funkcionális követelmények:
+####Funkcionális követelmények:
 
 - Regisztráció
 - Bejelentkezés
@@ -24,7 +24,7 @@ Az ötleteket, webes kliensel hozzuk létre, az adat védelem érdekében legyen
     - meglévő ötletének törlése
     - üzenet, komment írása
 
-#####Nem funkcionális követelmények:
+####Nem funkcionális követelmények:
 
 - Könnyű áttekinthetőség: színekkel és címkékkel külön csoportosítás.
 - Használhatóság: Könnyű áttekinthetőség, logikus elrendezés, kezelhetőség.
