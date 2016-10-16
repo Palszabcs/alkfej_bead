@@ -52,3 +52,5 @@ Az ötleteket, webes kliensel hozzuk létre, az adat védelem érdekében legyen
 - Projekt szerkesztése
 - Projekt törlése
 - Komment írása
+
+(docs/images/umlproject.jpg)
