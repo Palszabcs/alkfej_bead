@@ -1,0 +1,15 @@
+{
+    "sqlite3": {
+        "database": "test",
+        "user": "doci",
+        "password": "docika"
+    },
+    "server": {
+        "port": 4444
+    },
+    "app": {
+        "layouts": true,
+        "themes": true,
+        "languages": true
+    }
+}

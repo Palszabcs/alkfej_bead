@@ -1,0 +1,41 @@
+{% extends 'master' %}
+
+{% block content %}
+
+  <h1>Új ötlet</h1>
+
+  {% if old('errors') %}
+    <div class="bg-danger text-white text-xs-center m-1 p-1">
+      {% for error in old('errors') %}
+        <li> {{ error.message }} </li>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {{ form.open({action: 'BrainstormController.create'}) }}
+
+    {{ csrfField }}
+
+    <div class="form-group">
+      {{ form.label('Ötlet címe') }}
+      {{ form.text('name', null, { class: 'form-control', placeholder: 'Cím', required: 'true', autofocus: 'true' }) }}
+    </div>
+
+    <div class="form-group">
+      {{ form.label('Leírás') }}
+      {{ form.textarea('instructions', null, { class: 'form-control', placeholder: 'Leírás', required: 'true', autofocus: 'true' }) }}
+    </div>
+
+
+    <div class="form-group">
+      {{ form.label('Kategória') }}
+      {{ form.select('categories[]', categories, selected_categories, null, { class: 'form-control', multiple: 'true' }) }}
+    </div>
+
+    {{ form.submit('Mentés', '/ideas/create', { class: 'btn btn-lg btn btn-default btn-block' }) }}
+
+  {{ form.close() }}
+
+  <button class="btn btn-lg btn btn-default btn-block"><a href="/">Vissza</a></button>
+
+{% endblock %}

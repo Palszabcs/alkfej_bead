@@ -1,10 +1,29 @@
 {% extends 'master' %}
 
+
 {% block content %}
-  <div class="__banner">
-    <div class="banner__inner">
-      <img src="/assets/logo.svg">
-      <h2>Practical <span>Reliable</span> Productive</h2>
+ 
+ <div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-success">
+                <div class="panel-heading">Ötletek listája</div>
+                    
+                    {% if currentUser %}
+                          <div class="col-md-8">
+                            <a href="/ideas/create" class="btn btn-primary">Új ötlet</a>
+                            <a href="/welcome/by_me" class="btn btn-primary">Ötleteim</a>
+                        </div>
+                    {% endif %}
+                    
+            </div>
+            
+            {% if not currentUser %}
+              <a href="/login" class="btn btn-info"> Jelenkezz be előbb >></a>
+            {% endif %}
+            
+        </div>
     </div>
-  </div>
+</div>
+
 {% endblock %}
