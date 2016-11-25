@@ -1,0 +1,11 @@
+{% extends "master" %}
+
+{% block content %}
+<h2>{{ project.name }}</h2>
+<h3>{{ category.name}}</h3>
+<h3>Leírás</h3>
+<pre>
+{{ project.instructions }}
+</pre>
+ <button type="submit" class="btn btn-default">Módosítás</button>
+{% endblock %}

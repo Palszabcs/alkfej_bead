@@ -9,8 +9,10 @@ Route.get('/register', 'BrainstormController.register')
 Route.post('/register', 'BrainstormController.doRegister')
 Route.post('/login', 'BrainstormController.doLogin')
 Route.post('/login', 'BrainstormController.doLogout')
+
+Route.get('/project/:id', 'BrainstormController.show')
+
 Route.get('/ideas/create', 'BrainstormController.create')
 Route.post('/ideas/create', 'BrainstormController.doCreate')
-Route.get('/ideas/:id', 'BrainstormController.show')
 Route.get('/ideas/edit', 'BrainstormController.edit')
 Route.post('/ideas/edit', 'BrainstormController.doEdit')

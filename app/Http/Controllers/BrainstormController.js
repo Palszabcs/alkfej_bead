@@ -2,12 +2,23 @@
 
 const User = use('App/Model/User')
 const Hash = use('Hash')
+const Database = use('Database')
+const Category = use('App/Model/Category')
+const Project = use('App/Model/Project')
+
 
 class BrainstormController {
 
     * index (request, response) { 
-        yield response.sendView('welcome') 
-    }
+
+        const category= yield Category.all()
+        const project= yield Project.all()
+
+        yield response.sendView('welcome', {
+        category: category.toJSON(),
+        project: project.toJSON()
+        })  
+     }
 
     * login (request, response) { 
         yield response.sendView('login') 
@@ -50,6 +61,18 @@ class BrainstormController {
     }
 
     yield response.sendView('login', { successMessage: 'Sikeres regisztráció, jelentkezzen be!' })
+    }
+
+    * show(request, response) {
+
+    const id = request.param('id')
+    const project = yield Project.find(id)
+    const category = yield Category.find(project.categories_id)
+
+    yield response.sendView('showProject', {
+    project: project.toJSON(),
+    category: category.toJSON()
+    })
     }
 
     * create (request, response) {

@@ -1,8 +1,6 @@
 {
-    "sqlite3": {
-        "database": "test",
-        "user": "doci",
-        "password": "docika"
+    "sqlite": {
+        "database": "database/development.sqlite"
     },
     "server": {
         "port": 4444

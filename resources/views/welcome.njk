@@ -10,10 +10,29 @@
                 <div class="panel-heading">Ötletek listája</div>
                     
                     {% if currentUser %}
-                          <div class="col-md-8">
-                            <a href="/ideas/create" class="btn btn-primary">Új ötlet</a>
-                            <a href="/welcome/by_me" class="btn btn-primary">Ötleteim</a>
+                       <div class="row">
+
+                        {% for c in category %}
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="panel panel-primary">
+                            <div class="panel-heading">{{ c.name }}</div>
+                            <ul class="list-group">
+                                {% for p in project %}
+                                {% if p.categories_id == c.id %}
+                                <li class="list-group-item">
+                                <a href="/project/{{ p.id }}">
+                                    {{ p.name }}
+                                </a>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                            </div>
                         </div>
+                        {% endfor %}
+
+                        </div>                      
+
                     {% endif %}
                     
             </div>
