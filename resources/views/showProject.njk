@@ -1,6 +1,7 @@
 {% extends "master" %}
 
 {% block content %}
+<div class="container">
 <h2>{{ project.name }}</h2>
 <h3>{{ category.name}}</h3>
 <h3>Leírás</h3>
@@ -11,9 +12,9 @@
 {% if (project.user_id == currentUser.id) %}
 <div>
 <a href="/projects/delete/{{project.id}}" type="submit" class="btn btn-primary">Törlés</a>
+<a href="/projects/edit/{{project.id}}" type="submit" class="btn btn-primary">Módosítás</a>
+<a href="/" type="submit" class="btn btn-default">Vissza</a>
 </div>
 {% endif %}
-<div>
-<a href="/" type="submit" class="btn btn-default">Vissza</a>
 </div>
 {% endblock %}

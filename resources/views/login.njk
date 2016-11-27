@@ -3,8 +3,9 @@
 {% block content %}
 
   {{ form.open({action: 'BrainstormController.doLogin', class: 'form-signin' }) }}
-
-    <div class="panel-heading">Bejelentkezés</div>
+<div class="container">
+            <div class="panel panel-success">
+                <div class="panel-heading">Bejelentkezés</div>
 
     {% if errorMessage %}
       <div class="bg-danger text-white text-xs-center my-1 p-1">

@@ -1,8 +1,9 @@
 {% extends 'master' %}
 
 {% block content %}
-
-  <h1>Új ötlet</h1>
+<div class="container">
+            <div class="panel panel-success">
+                <div class="panel-heading">Módosítás</div>
 
     {% if errorMessage %}
       <div class="bg-danger text-white text-xs-center my-1 p-1">
@@ -74,5 +75,5 @@
     {% if not currentUser %}
               <a href="/login" class="btn btn-info"> Jelenkezz be előbb >></a>
     {% endif %}
-
+</div>
 {% endblock %}

@@ -24,12 +24,13 @@ class BrainstormController {
     * by_me(request, response) {
 
         const id = request.param('id')
-        const project = yield Project.find(id)
+        const project = yield Project.all()
+        const filter = yield Project.query().where('user_id', id).fetch()
         const category = yield Category.all()
 
         yield response.sendView('welcome', {
         category: category.toJSON(),
-        project: project.toJSON()
+        project: filter.toJSON()
         })  
     }
 
@@ -195,6 +196,44 @@ class BrainstormController {
                 
             response.redirect('/')
        }
+
+       * filter(request, response) {
+          
+            const categories = yield Category.all()
+            const users = yield User.all()
+            const filters = null
+
+            yield response.sendView('filterProject',{
+            categories: categories.toJSON(),
+            users: users.toJSON(),
+            filters
+            });
+        }
+
+        * doFilter (request, response) {
+                const filters = {
+                name: request.input('name') || '',
+                category: request.input('categories_id'),
+                user: request.input('users_id')
+                }
+
+                const projects = yield Project.query()
+                .where(function () {
+                    if (filters.category > 0) this.where('categories_id', filters.category)
+                    if (filters.user > 0) this.where('user_id', filters.user)
+                    if (filters.name.length > 0) this.where('name', 'LIKE', `%${filters.name}%`)
+                })
+                .fetch()
+
+                const categories = yield Category.all()
+                const users = yield User.all()
+
+                yield response.sendView('filterProject', {
+                projects: projects.toJSON(),
+                categories: categories.toJSON(),
+                users: users.toJSON()
+                })
+            }
 
 }
 

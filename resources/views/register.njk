@@ -1,10 +1,10 @@
 {% extends 'master' %}
 
 {% block content %}
-
+<div class="container">
   {{ form.open({action: 'BrainstormController.doRegister', class: 'form-signin' }) }}
-
-    <div class="panel-heading">Bejelentkezés</div>
+            <div class="panel panel-success">
+                <div class="panel-heading">Regisztráció</div>
     
     {% if errorMessage %}
       <div class="bg-danger text-white text-xs-center my-1 p-1">
@@ -29,5 +29,5 @@
     {{ form.submit('Regisztráció', 'register', { class: 'btn btn-lg "btn btn-default" btn-block' }) }}
 
   {{ form.close() }}
-
+</div>
 {% endblock %}

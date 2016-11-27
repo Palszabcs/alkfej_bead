@@ -1,22 +1,15 @@
 {% extends 'master' %}
 
 {% block content %}
-
 <div class="container">
-            <div class="panel panel-success">
-                <div class="panel-heading">Új ötlet</div>
+             <div class="panel panel-success">
+                <div class="panel-heading">Szűrő</div>
 
     {% if errorMessage %}
       <div class="bg-danger text-white text-xs-center my-1 p-1">
         {{ errorMessage }}
       </div>
       {% endif %}
-
-      {% if successMessage %}
-      <div class="bg-success text-white text-xs-center my-1 p-1">
-        {{ successMessage }}
-      </div>
-    {% endif %}
 
 {% if currentUser %}
 
@@ -35,23 +28,17 @@
       {{ form.hidden('user_id', currentUser.id) }}
 
       <div class="form-group">
-        <label for="name" class="col-lg-2 control-label">Ötlet címe</label>
+        <label for="name" class="col-lg-2 control-label">Cím</label>
         <div class="col-lg-9">
           <input type="text" class="form-control" id="name" name="name" placeholder="Cím" value="{{old('name')}}">
         </div>
-      </div>
-
-    <div class="form-group">
-        <label for="instructions" class="col-lg-2 control-label">Leírás</label>
-        <div class="col-lg-9">
-          <textarea class="form-control" rows="3" id="instructions" name="instructions" placeholder= "Leírás">{{old('instructions')}}</textarea>
-      </div>
       </div>
 
       <div class="form-group">
         <label for="categories_id" class="col-lg-2 control-label">Kategória</label>
         <div class="col-lg-9">
           <select class="form-control" id="categories_id" name="categories_id">
+          <option value="">-</option>
             {% for category in categories %}
             <option value="{{ category.id }}"
               {% if category.id == old('categories_id') %}
@@ -63,10 +50,26 @@
         </div>
       </div>
 
+     <div class="form-group">
+        <label for="users_id" class="col-lg-2 control-label">Felhasználó</label>
+        <div class="col-lg-9">
+          <select class="form-control" id="users_id" name="users_id">
+          <option value="">-</option>
+            {% for user in users %}
+            <option value="{{user.id}}"
+              {% if user.id == old('users_id') %}
+              selected
+              {% endif %}
+            >{{ user.username }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Mégsem</button>
-        <button type="submit" class="btn btn-primary">Küldés</button>
+        <button type="submit" class="btn btn-primary">Szűrés</button>
       </div>
     </div>
     </div>
@@ -77,4 +80,22 @@
               <a href="/login" class="btn btn-info"> Jelenkezz be előbb >></a>
     {% endif %}
 </div>
+{% endblock %}
+
+{% block footer %}
+<div class="span3 offset2">
+            <div class="panel panel-success">
+                <div class="panel-heading">Találatok</div>
+                        <div class="span1">
+                            <ul class="list-group">
+                                {% for p in projects %}
+                                <li class="list-group-item">
+                                <a href="/project/{{ p.id }}">
+                                    {{ p.name }}
+                                </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+</div>        
 {% endblock %}
