@@ -7,5 +7,13 @@
 <pre>
 {{ project.instructions }}
 </pre>
- <button type="submit" class="btn btn-default">Módosítás</button>
+
+{% if (project.user_id == currentUser.id) %}
+<div>
+<a href="/projects/delete/{{project.id}}" type="submit" class="btn btn-primary">Törlés</a>
+</div>
+{% endif %}
+<div>
+<a href="/" type="submit" class="btn btn-default">Vissza</a>
+</div>
 {% endblock %}

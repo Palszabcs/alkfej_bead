@@ -1,0 +1,21 @@
+{% extends "master" %}
+
+{% block content %}
+<h2>Biztosan törli?</h2>
+<h2>{{ project.name }}</h2>
+<h3>{{ category.name}}</h3>
+<h3>Leírás</h3>
+<pre>
+{{ project.instructions }}
+</pre>
+<form class="form-horizontal" method="post">
+{{ csrfField }}
+{{ form.hidden('user_id', currentUser.id) }}
+<div class="form-group">
+<div class="col-lg-9">
+        <button type="submit" class="btn btn-primary">Törlés</button>
+ </div>
+ </div>
+ </form>
+        <a href="/" type="submit" class="btn btn-default">Vissza</a>
+{% endblock %}

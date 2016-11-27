@@ -28,7 +28,8 @@ const providers = [
   'adonis-lucid/providers/LucidProvider',
   'adonis-lucid/providers/FactoryProvider',
   'adonis-middleware/providers/AppMiddlewareProvider',
-  'adonis-auth/providers/AuthManagerProvider'
+  'adonis-auth/providers/AuthManagerProvider',
+  'adonis-validation-provider/providers/ValidatorProvider'
 ]
 
 /*
@@ -62,6 +63,7 @@ const aceProviders = [
 |
 */
 const aliases = {
+  Validator: 'Adonis/Addons/Validator',
   Command: 'Adonis/Src/Command',
   Config: 'Adonis/Src/Config',
   Database: 'Adonis/Src/Database',
