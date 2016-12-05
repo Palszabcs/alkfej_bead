@@ -54,3 +54,64 @@ Az ötleteket, webes kliensel hozzuk létre, az adat védelem érdekében legyen
 - Komment írása
 
 ![](docs/images/umlproject.jpg)
+
+## 2. Tervezés
+
+### Oldaltérkép
+
+####Publikus:
+
+- főoldal
+- bejelentkezés
+- regisztráció
+
+####Bejelentkezett:
+
+- ötletek
+  - új ötlet
+  - ötlet megtekintése
+    - saját ötlet szerkesztése
+    - saját ötlet törlése
+  - ötletek szűrése
+
+#### Design-tervek megvalósítása
+
+Főoldal bejelentkezés nélkül
+![Főoldal](docs/images/design01.jpg)
+
+Regisztráció
+![Regisztráció](documentation-assets/progress-images/final/regisztracio.PNG)
+
+Bejelentkezés
+![Bejelentkezés](documentation-assets/progress-images/final/bejelentkezes.PNG)
+
+Feladatok
+![Feladatok](documentation-assets/progress-images/final/feladatok.PNG)
+
+Új feladat
+![Új feladat](documentation-assets/progress-images/final/ujfeladat.PNG)
+
+Feladat részletek
+![Feladat részletek](documentation-assets/progress-images/final/feladatreszletek.PNG)
+
+Feladat szerkesztés
+![Feladat szerkesztés](documentation-assets/progress-images/final/feladatszerkesztes.PNG)
+
+Feladat törlés
+![Feladat törlés](documentation-assets/progress-images/final/feladattorles.PNG)
+
+Jogosultságok
+![Jogosultságok](documentation-assets/progress-images/final/jogosultsagok.PNG)
+
+Új jogosultság
+![Új jogosultság](documentation-assets/progress-images/final/ujjogosultsag.PNG)
+
+Jogosultság szerkesztése
+![Jogosultság szerkesztése](documentation-assets/progress-images/final/jogosultsagszerkesztes.PNG)
+
+Jogosultság törlés
+![Jogosultság törlés](documentation-assets/progress-images/final/jogosultsagtorles.PNG)
+
+### Adatbázis-kapcsolatok
+
+![Adatbázis-kapcsolatok](documentation-assets/db-relations-1.png)
