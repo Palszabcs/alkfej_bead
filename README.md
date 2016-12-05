@@ -102,8 +102,6 @@ Saját ötlet részletek
 ![Ötletek szűrése](docs/images/design08.jpg)
 
 
-### Adatbázis-kapcsolatok
+#### Adatbázis-kapcsolatok
 
-![Adatbázis-kapcsolatok](documentation-assets/db-relations-1.png)
-=======
->>>>>>> 5fd5fc93f618177611ca79609d1b4fa984254fa1
+![Adatbázis-kapcsolatok](docs/images/database.jpg)
