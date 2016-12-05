@@ -104,4 +104,4 @@ Saját ötlet részletek
 
 #### Adatbázis-kapcsolatok
 
-![Adatbázis-kapcsolatok](docs/images/database.jpg)
+![Adatbázis-kapcsolatok](docs/images/data.jpg)
