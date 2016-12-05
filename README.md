@@ -21,7 +21,7 @@ Az ötleteket, webes kliensel hozzuk létre, az adat védelem érdekében legyen
     - új ötlet feltöltése
     - meglévő ötletének szerkesztése
     - meglévő ötletének törlése
-    - üzenet, komment írása
+    - ötletek szűrése
 
 ####Nem funkcionális követelmények:
 
@@ -48,12 +48,13 @@ Az ötleteket, webes kliensel hozzuk létre, az adat védelem érdekében legyen
 ####Bejelentkezett felhasználó: A publikus oldalak elérésén felül egyéb funkciókhoz is hozzáfér.
 
 - Új projekt felvétele
-- Projekt megtekintése
-- Projekt szerkesztése
-- Projekt törlése
-- Komment írása
+- Ötlet megtekintése
+- Ötlet szerkesztése
+- Ötlet törlése
+- Ötlet szerkesztése
 
 ![](docs/images/umlproject.jpg)
+<<<<<<< HEAD
 
 ## 2. Tervezés
 
@@ -115,3 +116,5 @@ Jogosultság törlés
 ### Adatbázis-kapcsolatok
 
 ![Adatbázis-kapcsolatok](documentation-assets/db-relations-1.png)
+=======
+>>>>>>> 5fd5fc93f618177611ca79609d1b4fa984254fa1
