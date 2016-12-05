@@ -80,38 +80,27 @@ Az ötleteket, webes kliensel hozzuk létre, az adat védelem érdekében legyen
 Főoldal bejelentkezés nélkül
 ![Főoldal](docs/images/design01.jpg)
 
+Főoldal
+![Főoldal](docs/images/design04.jpg)
+
 Regisztráció
-![Regisztráció](documentation-assets/progress-images/final/regisztracio.PNG)
+![Regisztráció](docs/images/design02.jpg)
 
 Bejelentkezés
-![Bejelentkezés](documentation-assets/progress-images/final/bejelentkezes.PNG)
+![Bejelentkezés](docs/images/design03.jpg)
 
-Feladatok
-![Feladatok](documentation-assets/progress-images/final/feladatok.PNG)
+Ötlet részletek
+![Ötlet](docs/images/design05.jpg)
 
-Új feladat
-![Új feladat](documentation-assets/progress-images/final/ujfeladat.PNG)
+Saját ötletek
+![Saját ötlet](docs/images/design06.jpg)
 
-Feladat részletek
-![Feladat részletek](documentation-assets/progress-images/final/feladatreszletek.PNG)
+Saját ötlet részletek
+![Saját ötlet részletek](docs/images/design07.jpg)
 
-Feladat szerkesztés
-![Feladat szerkesztés](documentation-assets/progress-images/final/feladatszerkesztes.PNG)
+Ötletek szűrése
+![Ötletek szűrése](docs/images/design08.jpg)
 
-Feladat törlés
-![Feladat törlés](documentation-assets/progress-images/final/feladattorles.PNG)
-
-Jogosultságok
-![Jogosultságok](documentation-assets/progress-images/final/jogosultsagok.PNG)
-
-Új jogosultság
-![Új jogosultság](documentation-assets/progress-images/final/ujjogosultsag.PNG)
-
-Jogosultság szerkesztése
-![Jogosultság szerkesztése](documentation-assets/progress-images/final/jogosultsagszerkesztes.PNG)
-
-Jogosultság törlés
-![Jogosultság törlés](documentation-assets/progress-images/final/jogosultsagtorles.PNG)
 
 ### Adatbázis-kapcsolatok
 
