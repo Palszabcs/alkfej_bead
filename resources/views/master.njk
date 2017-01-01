@@ -46,8 +46,8 @@
                     <!-- Authentication Links -->
                     
                     {% if not currentUser %}
-                        <li><a href="/login">Bejelentkezés</a></li>
-                        <li><a href="/register">Regisztráció</a></li>
+                        <li><a href="/login" class="btnLogin">Bejelentkezés</a></li>
+                        <li><a href="/register" class="btnReg">Regisztráció</a></li>
                     {% else %}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -73,5 +73,9 @@
     <!-- JavaScript files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+    <script src="/scripts/popup_login.js"></script>
+    <script src="/scripts/popup_reg.js"></script>
+    {% block scripts %}{% endblock %}
 </body>
 </html>

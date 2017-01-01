@@ -1,10 +1,12 @@
 {% extends 'master' %}
 
+{% block scripts %}
+<script src="/scripts/popup_reg.js"></script>
+{% endblock %}
+
 {% block content %}
 <div class="container">
   {{ form.open({action: 'BrainstormController.doRegister', class: 'form-signin' }) }}
-            <div class="panel panel-success">
-                <div class="panel-heading">Regisztráció</div>
     
     {% if errorMessage %}
       <div class="bg-danger text-white text-xs-center my-1 p-1">
