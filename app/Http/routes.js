@@ -19,7 +19,7 @@ Route.get('/projects/filter', 'BrainstormController.filter').middleware('auth')
 Route.post('/projects/filter', 'BrainstormController.doFilter').middleware('auth')
 
 Route.group('ajax', function () {
-  Route.post('/login', 'UserController.ajaxLogin')
-  Route.post('/register', 'UserController.ajaxRegister')
-  Route.post('/create', 'VasarlasController.ajaxCreate')
+  Route.post('/login', 'BrainstormController.ajaxLogin')
+  Route.post('/register', 'BrainstormController.ajaxRegister')
+  Route.post('/create', 'BrainstormController.ajaxCreate')
 }).prefix('/ajax')

@@ -1,17 +1,3 @@
-function ajaxDelete(url) {
-  const headers = {
-    'csrf-token': $('[name="_csrf"]').val()
-  }
-  return Promise.resolve(
-    $.ajax({
-      url,
-      method: 'DELETE',
-      dataType: 'json',
-      headers
-    })
-  )
-}
-
 function my_confirm(str) {
 
   let _resolve, _reject

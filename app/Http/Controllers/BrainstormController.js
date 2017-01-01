@@ -255,7 +255,7 @@ class BrainstormController {
                 response.send({ success: false })
                     return
                 }
-
+                
                 const user = new User()
 
                 user.username = registerData.username;

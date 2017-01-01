@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
- 
+<div id="navbar">
  <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -41,11 +41,11 @@
             </div>
             
             {% if not currentUser %}
-              <a href="/login" class="btn btn-info"> Jelenkezz be előbb >></a>
+              <a href="/login" class="btn btn-info btnLogin"> Jelenkezz be előbb >></a>
             {% endif %}
             
         </div>
     </div>
 </div>
-
+</div>
 {% endblock %}
