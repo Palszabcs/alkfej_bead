@@ -37,9 +37,11 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="/">Főoldal</a></li>
+                    {% if currentUser %}
                     <li><a href="/projects/create">Új ötlet</a></li>
                     <li><a href="/by_me/{{currentUser.id}}">Ötleteim</a></li>
                     <li><a href="/projects/filter">Keresés</a></li>
+                    {% endif %}
                 </ul>
 
                 <!-- Right Side Of Navbar -->

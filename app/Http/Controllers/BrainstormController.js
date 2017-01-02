@@ -240,31 +240,18 @@ class BrainstormController {
             }
             
             * ajaxRegister(request, response) {
-                const registerData = request.except('_csrf');
+                 const user = new User()
+                    user.username = request.input('name')
+                    user.email = request.input('email')
+                    user.password = yield Hash.make(request.input('password'))
 
-                const rules = {
-                username: 'required|alpha_numeric|unique:users',
-                email: 'required|email|unique:users',
-                password: 'required|min:4',
-                };
+                    try{
+                    yield user.save()
+                    } catch(e){
+                         response.send({ success: false })
+                    }
 
-                const validation = yield Validator.validateAll(registerData, rules)
-
-                if (validation.fails()) {
-                
-                response.send({ success: false })
-                    return
-                }
-                
-                const user = new User()
-
-                user.username = registerData.username;
-                user.email = registerData.email;
-                user.password = yield Hash.make(registerData.password) 
-                yield user.save()
-                
-                yield request.auth.login(user)
-                response.send({ success: true })
+                    response.send({ success: true })
             }
 
 }
