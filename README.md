@@ -125,6 +125,7 @@ Saját ötlet részletek
 
 ## 4. Tesztelés
 
+![](docs/images/teszt.png)
 
 ## 5. Felhasználói dokumentáció
 
