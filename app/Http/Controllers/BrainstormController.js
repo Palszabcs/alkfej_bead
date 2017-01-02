@@ -254,6 +254,27 @@ class BrainstormController {
                     response.send({ success: true })
             }
 
+            * ajaxCreate(request, response) {
+                    const projectData = request.except('_csrf');
+
+                    const rules = {
+                        name: 'required',
+                        categories_id: 'required',
+                        instructions: 'required',
+                        user_id: 'required'
+                    };
+
+                    const validation = yield Validator.validateAll(projectData, rules)
+
+                    if (validation.fails()) {
+                    response.send({ success: false })
+                        return
+                    }
+                    
+                    const project = yield Project.create(projectData)
+
+                    response.send({ success: true })
+            }
 }
 
 module.exports = BrainstormController

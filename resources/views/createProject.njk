@@ -1,5 +1,9 @@
 {% extends 'master' %}
 
+{% block scripts %}
+<script src="/scripts/projectsAdd.js"></script>
+{% endblock %}
+
 {% block content %}
 
 <div class="container">
@@ -29,7 +33,7 @@
   {% endif %}
 
   <form class="form-horizontal" method="post">
-    <div class="row">
+    
     {{ csrfField }}
 
       {{ form.hidden('user_id', currentUser.id) }}

@@ -28,10 +28,10 @@
   {% endif %}
 
   <form class="form-horizontal" method="post">
-    <div class="row">
     {{ csrfField }}
 
       {{ form.hidden('user_id', currentUser.id) }}
+      {{ form.hidden('project_id', project.id) }}
 
       <div class="form-group">
         <label for="name" class="col-lg-2 control-label">Ötlet címe</label>
@@ -68,10 +68,9 @@
         <button type="submit" class="btn btn-primary">Módosítás</button>
       </div>
     </div>
-    </div>
     </form>
     {% endif %}
-
+    </div>
     {% if not currentUser %}
               <a href="/login" class="btn btn-info"> Jelenkezz be előbb >></a>
     {% endif %}

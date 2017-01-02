@@ -38,7 +38,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/">Főoldal</a></li>
                     {% if currentUser %}
-                    <li><a href="/projects/create">Új ötlet</a></li>
+                    <li><a href="/projects/create" class="btnAdd">Új ötlet</a></li>
                     <li><a href="/by_me/{{currentUser.id}}">Ötleteim</a></li>
                     <li><a href="/projects/filter">Keresés</a></li>
                     {% endif %}
@@ -67,9 +67,8 @@
             </div>
         </div>
     </nav>
-    </div>
     {% block content %}{% endblock %}
-
+    </div>
     {% block footer %}{% endblock %}
     
 
@@ -79,6 +78,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
     <script src="/scripts/popup_login.js"></script>
     <script src="/scripts/popup_reg.js"></script>
+    <script src="/scripts/popup_add.js"></script>
     {% block scripts %}{% endblock %}
 </body>
 </html>

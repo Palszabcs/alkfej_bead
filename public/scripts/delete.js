@@ -1,4 +1,13 @@
-function my_confirm(str) {
+$('#btnDelete').on('click', function (e) {
+  e.preventDefault()
+  my_confirm('Biztosan törlöd a receptet?')
+    .then(response => {
+      if (response) {
+        window.location.href = this.href  
+      }
+    })
+
+  function my_confirm(str) {
 
   let _resolve, _reject
 
@@ -17,13 +26,4 @@ function my_confirm(str) {
     _reject = reject
   })
 }
-
-$('#btnDelete').on('click', function (e) {
-  e.preventDefault()
-  my_confirm('Biztosan törlöd a receptet?')
-    .then(response => {
-      if (response) {
-        window.location.href = this.href  
-      }
-    })
 })
