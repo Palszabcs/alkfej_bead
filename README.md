@@ -105,3 +105,47 @@ Saját ötlet részletek
 #### Adatbázis-kapcsolatok
 
 ![Adatbázis-kapcsolatok](docs/images/data.jpg)
+
+## 3. Implementáció
+
+###Fejlesztőkörnyezet
+
+**Visual Studio Code**
+
+###Könyvtárstruktúra
+
+![](docs/images/konyvtar.png)
+
+###Funkciók
+
+* popup_login.js - (AJAX) Belépés egy felugro ablakon kersztül, majda menüsor és a főoldal gombjainak is a frissitése
+* popup_reg.js - (AJAX) Regisztráció felugro ablakban
+* popup_add.js - (AJAX) Vásárlás hozzáadása egy felugro ablakban , sikeres létrehozás esetén a lista frissülése
+* delete.js - Törlés elött egy felugró ablakban meg kell erősíteni a szándékunkat
+
+## 4. Tesztelés
+
+
+## 5. Felhasználói dokumentáció
+
+**Futtatáshoz szükséges operációs rendszer:** Tetszőleges operációs rendszer
+
+**A futtatáshoz szükséges hardver:** Operációs rendszerek szerint megadva
+
+**Egyéb követelmények:** Internet böngésző telepítése, JavaScript ajánlott
+
+**Program használata:**
+
+1. Böngészőben nyissuk meg a főoldalt
+2. Jobb felső sarokban vagy a képernyő közepén kattintsunk a Bejelentkezés/Regisztráció feliratra
+3. Bejelentkezés/Regisztráció után a főoldalra jutunk
+4. A fenti navigációs ablakban az Új vásárlás felvitele gombra kattintva tudunk új vásárlást felvenni
+5. Töltsük ki az űrlapot
+6. Hibás adatok esetén az űrlap jelezni fogja a hibát
+7. Küldés gombra kattintva mentsük el az adatokat
+8. Vásárlás törlése oldalon: A kiválasztott vásárlást törölhetjük
+9. Vásárlás szerkesztése oldalon: A kiválasztott vásárlást szerkeszthetjük
+10. Vásárlások megtekintése oldalon: A kiválasztott vásárlást megtekinthetjük és szerkeszthetjük vagy törölhetjük
+11. Megtekintés oldalon: található a szerkesztés gomb, és a törlés gomb
+12. Szerkesztés oldalon: megegyezik az új vásárlás felvitel funkcióval, csak előre láthatóak benne a vásárlás eddigi adatai
+13. Vásárlások keresése oldalon: a vásárlás helye , időpontja , kategoriája tetszőleges megadása majd a szürés gombra kattintva listázodnak a megfelelő vásárlások
